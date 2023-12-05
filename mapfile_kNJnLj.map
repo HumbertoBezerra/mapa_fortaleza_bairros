@@ -1,0 +1,88 @@
+  LAYER
+    CONNECTION ""
+    CONNECTIONTYPE POSTGIS
+    DATA ""
+    LABELCACHE OFF
+    METADATA
+      "nomeoriginal"	"sedes_municipais"
+      "TEMA"	"Sedes municipais"
+    END # METADATA
+    NAME "sedes_municipais"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    PROJECTION
+      "init=epsg:4674"
+    END # PROJECTION
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TOLERANCE 3
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Sedes municipais"
+      STYLE
+        COLOR 60 235 235
+        SIZE 8
+        SYMBOL "sedesmunicipais"
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    COMPOSITE
+      OPACITY 50
+    END # COMPOSITE
+    CONNECTION ""
+    CONNECTIONTYPE POSTGIS
+    DATA ""
+    METADATA
+      "nomeoriginal"	"limite_municipal"
+      "TEMA"	"Limite Municipal"
+    END # METADATA
+    NAME "limite_municipal"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Limite Muncipal"
+      STYLE
+        OUTLINECOLOR 0 0 0
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    COMPOSITE
+      OPACITY 50
+    END # COMPOSITE
+    CONNECTION ""
+    CONNECTIONTYPE POSTGIS
+    DATA ""
+    METADATA
+      "nomeoriginal"	"bairros_de_fortaleza"
+      "TEMA"	"Bairros de Fortaleza"
+    END # METADATA
+    NAME "bairros_de_fortaleza"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "bairros_de_fortaleza"
+      STYLE
+        OUTLINECOLOR 75 0 130
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+END # MAP
+
